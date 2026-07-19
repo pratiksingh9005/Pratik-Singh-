@@ -105,6 +105,12 @@
     .navlinks.open{ display:flex; }
     .navtoggle{ display:flex; }
   }
+  @media (max-width:768px){
+    .hero-visual .avatar{
+        width:200px;
+        height:250px;
+    }
+  }
 
   section{ padding: 96px 0; border-bottom: 1px solid var(--line); }
   section:last-of-type{ border-bottom:none; }
@@ -138,19 +144,45 @@
   .social-row a:hover{ color: var(--teal); border-color: var(--teal); }
 
   .hero-visual{
-    background: var(--bg-panel); border:1px solid var(--line); border-radius: var(--radius);
-    padding: 26px; position:relative;
-  }
-  .hero-visual .avatar{
-    width: 88px; height:88px; border-radius: 50%;
-    background: linear-gradient(135deg, var(--teal-soft), var(--amber-soft));
+    background: var(--bg-panel);
     border: 1px solid var(--line);
-    display:flex; align-items:center; justify-content:center;
-    font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:1.6rem; color: var(--teal);
-    margin-bottom: 18px;
+    border-radius: 12px;
+    padding: 35px;
+    text-align: center;
   }
-  .hero-visual .name{ font-weight:600; font-size:1.05rem; }
-  .hero-visual .sub{ color: var(--ink-soft); font-size:0.85rem; margin-bottom: 18px; }
+
+  .hero-visual .avatar{
+    width: 260px;
+    height: 320px;
+    margin: 0 auto 25px;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 4px solid var(--teal);
+    box-shadow: 0 15px 35px rgba(0,0,0,.18);
+    transition: transform .3s ease;
+  }
+
+  .hero-visual .avatar:hover{
+    transform: translateY(-5px);
+  }
+
+  .hero-visual .avatar img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:top center;
+  }
+
+  .hero-visual .name{
+    font-size:1.4rem;
+    font-weight:700;
+    margin-top:10px;
+  }
+
+  .hero-visual .sub{
+    font-size:1rem;
+    color:var(--ink-soft);
+  }
   .chart-label{ display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:0.72rem; color: var(--ink-soft); margin-bottom:8px; }
   .chart-label b{ color: var(--teal); }
 
@@ -322,7 +354,9 @@
       </div>
     </div>
     <div class="hero-visual">
-      <div class="avatar">PS</div>
+      <div class="avatar">
+        <img src="profile.jpeg" alt="Pratik Singh">
+      </div>
       <div class="name">Pratik Singh</div>
       <div class="sub">CSE (AI) · Babu Banarasi Das University</div>
       <div class="chart-label"><span>SGPA TREND</span><b>8.04 · Year 1</b></div>
@@ -414,26 +448,45 @@
       <h2>Semester by semester</h2>
     </div>
     <div class="timeline">
+
       <div class="tl-row">
         <div class="tl-year">Y1</div>
-        <div class="tl-body"><div class="yr-title">First Year</div><div class="yr-status">Completed</div></div>
-        <div class="tl-score">8.04</div>
+        <div class="tl-body">
+          <div class="yr-title">First Year</div>
+          <div class="yr-status">Completed</div>
+        </div>
+        <a href="Result1.jpeg" target="_blank" class="btn btn-primary">
+          See Result
+        </a>
       </div>
+
       <div class="tl-row">
         <div class="tl-year">Y2</div>
-        <div class="tl-body"><div class="yr-title">Second Year</div><div class="yr-status">In progress</div></div>
-        <div class="tl-score pending">In Progress</div>
+          <div class="tl-body">
+            <div class="yr-title">Second Year</div>
+            <div class="yr-status">In Progress</div>
+          </div>
+          <button class="btn btn-outline" disabled>Result Pending</button>
       </div>
+
       <div class="tl-row">
         <div class="tl-year">Y3</div>
-        <div class="tl-body"><div class="yr-title">Third Year</div><div class="yr-status">Upcoming</div></div>
-        <div class="tl-score pending">—</div>
+        <div class="tl-body">
+          <div class="yr-title">Third Year</div>
+          <div class="yr-status">Upcoming</div>
+        </div>
+        <button class="btn btn-outline" disabled>Result Pending</button>
       </div>
+
       <div class="tl-row">
         <div class="tl-year">Y4</div>
-        <div class="tl-body"><div class="yr-title">Fourth Year</div><div class="yr-status">Upcoming</div></div>
-        <div class="tl-score pending">—</div>
+        <div class="tl-body">
+          <div class="yr-title">Fourth Year</div>
+          <div class="yr-status">Upcoming</div>
+        </div>
+        <button class="btn btn-outline" disabled>Result Pending</button>
       </div>
+
     </div>
     <!-- EDIT: replace # with your actual result portal link -->
     <a href="#" target="_blank" rel="noopener" class="btn btn-primary results-cta">View Official Results</a>
@@ -497,8 +550,8 @@
       <p class="eyebrow">Contact</p>
       <h2>Let's talk</h2>
       <p>Open to internship opportunities, collaborations, or just a conversation about data.</p>
-      <div class="row"><b>Email</b> youremail@example.com</div>
-      <div class="row"><b>Phone</b> +91 00000 00000</div>
+      <div class="row"><b>Email</b> pratiksingh9005@gmail.com</div>
+      <div class="row"><b>Phone</b> +91 9565317039</div>
       <div class="row"><b>Location</b> Lucknow, Uttar Pradesh</div>
     </div>
     <form id="contactForm">
